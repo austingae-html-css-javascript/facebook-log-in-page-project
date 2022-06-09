@@ -1,0 +1,182 @@
+:root {
+  --white-color: rgb(255,255,255);
+  --black-color: rgb(27,30,33);
+  --light-gray-color: rgb(240,242,245);
+  --gray-color: rgb(221,223,227);
+  --blue-color: rgb(26,119,242);
+  --green-color: rgb(66,183,42);
+
+  --primary-font: Helvetica;
+}
+
+body {
+  margin: 0rem;
+  font-family: var(--primary-font);
+  background-color: var(--light-gray-color);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+
+.container {
+  width: 30rem; /*width = 16px * 30rem = 480px*/
+  margin: 0px auto 0px auto; /*the leftover margin to the right will be equally distributed between margin-left and margin-right. As a result, the <div class="container"> elements will all be positioned at the center of the page.*/
+}
+
+.middle-container {
+  background-color: var(--white-color);
+  border-radius: 0.625rem;
+  padding: 1rem 0.625rem 1.5rem 0.625rem;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+
+}
+
+/*<header></header>*/
+#facebook-title {
+  color: var(--blue-color);
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  cursor: default;
+}
+
+#facebook-motto {
+  color: var(--black-color);
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+  cursor: default;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.align-to-the-center {
+  display: block;
+  margin: 0 auto 0 auto;
+}
+
+.margin-bottom {
+  margin-bottom: 1rem
+}
+
+/*section*/
+#username,
+#password {
+  border-color: var(--gray-color);
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 0.0875rem;
+
+  padding: 0.875rem 1rem 0.875rem 1rem;
+
+  width: 23.75rem;
+
+  font-size: 1.0625rem; /*this sets the font-size for the words typed by the user"*/
+}
+
+#username::placeholder,
+#password::placeholder {
+  font-size: 1.0625rem; /*this sets the font-size for the placeholder*/
+}
+
+#log-in-button {
+  background-color: var(--blue-color);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+  width: 26rem;
+
+  padding: 0.875rem 1rem 0.875rem 1rem;
+}
+
+#log-in-button:hover {
+  filter: brightness(90%); /*when hover over the button, the brightness of the button decreases by 10%*/
+}
+
+#forgot-password {
+  color: var(--blue-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#forgot-password:hover {
+  text-decoration: underline;
+}
+
+#line {
+  border-style: solid;
+  border-color: var(--gray-color);
+  border-width: 0.5px;
+  width: 80%;
+
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#create-new-account-button {
+  background-color: var(--green-color);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+  width: 15rem;
+
+  padding: 0.875rem 1rem 0.875rem 1rem;
+}
+
+#create-new-account-button:hover {
+  filter: brightness(90%);
+}
+
+#log-in-button,
+#forgot-password,
+#create-new-account-button {
+  cursor: pointer;
+}
+
+.bottom-container {
+  margin-top: 2rem;
+}
+
+#create-a-page {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#create-a-page:hover {
+  text-decoration: underline;
+}
+
+.top-empty-space {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 68.75rem) { /*if screen width size reaches 900px, then...*/
+  .split {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between; /*.split leftover space to the right will be equally distributed between the divs*/
+
+    /*these two lines of code center the elements vertically*/
+    height: 100vh;
+    align-items: center;
+  }
+
+  #facebook-title,
+  #facebook-motto {
+    text-align: left;
+  }
+}
